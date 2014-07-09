@@ -1,0 +1,12 @@
+%h1
+  Things
+
+- if @things.any?
+  %ul
+    = render partial: "things/thing", collection: @things
+- else
+  %p
+    We have no things.
+
+%h3
+  = link_to "Make thing", new_thing_url(thing: {name: "Test"})
